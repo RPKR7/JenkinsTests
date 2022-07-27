@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Build App'
+                git 'https://github.com/RPKR7/JenkinsTests.git'
             }
         }
         stage('Test') {
             steps {
-                echo 'Test App'
+                sh 'mvn test'
             }
         }
         stage('Deploy') {
