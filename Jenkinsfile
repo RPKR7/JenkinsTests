@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/RPKR7/JenkinsTests.git'
+                sh 'mvn clean package'
             }
         }
         stage('Test') {
